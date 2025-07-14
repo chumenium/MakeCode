@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文字列生成アプリ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>文字列生成アプリ</h1>
+        <div class="input-section">
+            <label for="length">文字数:</label>
+            <input type="number" id="length" min="1" max="1000" value="10" placeholder="文字数を入力">
+            
+            <div class="options">
+                <label>
+                    <input type="checkbox" id="uppercase" checked>
+                    大文字を含む
+                </label>
+                <label>
+                    <input type="checkbox" id="lowercase" checked>
+                    小文字を含む
+                </label>
+                <label>
+                    <input type="checkbox" id="numbers" checked>
+                    数字を含む
+                </label>
+                <label>
+                    <input type="checkbox" id="symbols">
+                    記号を含む
+                </label>
+            </div>
+            
+            <button id="generate">文字列を生成</button>
+        </div>
+        
+        <div class="result-section">
+            <label for="result">生成された文字列:</label>
+            <textarea id="result" readonly placeholder="ここに生成された文字列が表示されます"></textarea>
+            <button id="copy">コピー</button>
+        </div>
+        
+        <div class="history">
+            <h3>生成履歴</h3>
+            <div id="history-list"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
